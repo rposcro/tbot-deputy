@@ -1,0 +1,31 @@
+application:
+    path:
+        configuration:  /etc/tbot-deputy
+        data:           /var/lib/tbot-deputy
+
+server:
+    port: 4080
+
+logging:
+    config: /etc/tbot-deputy/logback.xml
+
+spring:
+    profiles:
+        active: prod-rpibplus,linux
+    application:
+        name: ThingBot Deputy
+        admin:
+            enabled: false
+    main:
+        show_banner: false
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+    jmx:
+        enabled: false
+
+hardware:
+    rpibplus:
+        output_pins:  0, 1, 2, 3, 4, 5, 12, 6
