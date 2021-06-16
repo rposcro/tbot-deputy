@@ -2,5 +2,7 @@
 .idea
 .git
 .DS_Store
+.gradle/
 target/
+build/
 
